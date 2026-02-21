@@ -69,9 +69,9 @@
   .nav-logo {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     color: var(--accent);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em; /* Fix: Etwas mehr Platz */
   }
 
   .nav-links {
@@ -191,17 +191,16 @@
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     font-size: clamp(3.5rem, 8vw, 6.5rem);
-    line-height: 1.08;
-    letter-spacing: 0.04em;
+    line-height: 1.2; /* Fix: Von 1.08 auf 1.2 erhöht für mehr Luft */
+    letter-spacing: 0; /* Fix: Negatives Spacing entfernt */
     margin-bottom: 28px;
   }
   .hero h1 .grad {
-    display: block;
+    display: inline-block; /* Fix: Block zu Inline-Block */
     background: linear-gradient(125deg, var(--accent) 0%, var(--accent2) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: 0.04em;
   }
 
   .hero-desc {
@@ -239,7 +238,7 @@
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     font-size: 3rem;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.02em; /* Fix: Weniger extrem */
     background: linear-gradient(125deg, var(--accent), var(--accent2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -273,9 +272,9 @@
     font-family: 'Syne', sans-serif;
     font-weight: 700;
     font-size: clamp(2.2rem, 4vw, 3.2rem);
-    letter-spacing: -0.035em;
+    letter-spacing: -0.01em; /* Fix: Buchstabenabstand korrigiert */
     margin-bottom: 56px;
-    line-height: 1.05;
+    line-height: 1.2; /* Fix: Erhöht */
   }
 
   /* ── EXP CARDS ── */
@@ -333,7 +332,7 @@
     font-family: 'Syne', sans-serif;
     font-weight: 700;
     font-size: 1.75rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
     margin-bottom: 12px;
   }
   .exp-desc {
@@ -403,8 +402,9 @@
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     font-size: 2.2rem;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.01em;
     margin-bottom: 14px;
+    line-height: 1.3;
   }
   .cta-banner p {
     color: var(--muted);
@@ -460,7 +460,7 @@
     font-family: 'Syne', sans-serif;
     font-weight: 700;
     font-size: 1.3rem;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
     margin-bottom: 10px;
   }
   .contact-hint { font-size: 0.85rem; color: var(--muted); font-weight: 400; }
@@ -487,7 +487,7 @@
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
     .hero { padding: 100px 24px 60px; }
-    .hero h1 { font-size: 3.2rem; }
+    .hero h1 { font-size: 3.2rem; line-height: 1.2; }
     .hero-desc { font-size: 0.95rem; }
     section { padding: 64px 24px; }
     .stats-strip { margin: 0 24px; grid-template-columns: 1fr; }
@@ -501,10 +501,8 @@
 </head>
 <body>
 
-<!-- Animated background canvas -->
 <canvas id="bg-canvas"></canvas>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">MaceMeme</div>
   <ul class="nav-links">
@@ -516,7 +514,6 @@
   <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="about">
   <div class="hero-inner">
     <div class="hero-tag"><span class="dot"></span>Open to Staff Positions</div>
@@ -531,7 +528,6 @@
   </div>
 </section>
 
-<!-- STATS -->
 <div class="stats-strip fade-in">
   <div class="stat-item">
     <span class="stat-num">7,700+</span>
@@ -547,7 +543,6 @@
   </div>
 </div>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <p class="section-label">Track Record</p>
   <h2 class="section-title">Where I've Worked</h2>
@@ -610,7 +605,6 @@
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <p class="section-label">Capabilities</p>
   <h2 class="section-title">What I Bring</h2>
@@ -630,14 +624,12 @@
   </div>
 </section>
 
-<!-- CTA -->
 <div class="cta-banner fade-in">
   <h2>Want me on your team?</h2>
   <p>I'm actively looking for staff positions. Reach out on Discord or via Email — I respond fast.</p>
   <a href="#contact" class="btn btn-primary">Contact Me →</a>
 </div>
 
-<!-- CONTACT -->
 <section id="contact">
   <p class="section-label">Get In Touch</p>
   <h2 class="section-title">Contact</h2>
